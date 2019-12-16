@@ -22,4 +22,14 @@ tc_gt
 
 dat_1 %>% head()
 
+dat_2 %>% head(2)
+
 dat_1$Email %>% head()
+
+dat_1[c(2,5,8),]
+dat_1[,c(2,5)]
+
+#toJSON() convierte un dataframe a json
+
+
+
