@@ -14,7 +14,10 @@ imputed_data <- housing_data[,names(housing_data) %in% columns] %>%
        method = "pmm", 
        seed = 2018)
 
-imputed_data$imp$ptratio
+
+
+
+
 
 ## Modelos sujeridos pmm -comparacion predictiva de medias
 ## logreg - Regresion logistica

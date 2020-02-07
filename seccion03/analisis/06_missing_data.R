@@ -16,7 +16,11 @@ View(datos_perdidos)
 
 data_clean <- na.omit(datos_perdidos)
 
-View(data_clean)
+head(data_clean)
+head(datos_perdidos)
+
+summary(datos_perdidos)
+summary(data_clean)
 
 is.na(datos_perdidos[4,2])
 is.na(datos_perdidos$Income)
@@ -36,7 +40,11 @@ data_clean2 <- datos_perdidos[complete.cases(datos_perdidos),]
 
 datos_perdidos$Income[datos_perdidos$Income == 0] <- NA
 
+head(datos_perdidos)
+
 datos_perdidos$Income[datos_perdidos$Income == 0]
+
+head(datos_perdidos)
 
 #Medidas de centralizacion y disperción.
 

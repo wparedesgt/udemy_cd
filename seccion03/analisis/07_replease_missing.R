@@ -7,6 +7,10 @@ data$Income_mean <- ifelse(is.na(data$Income),
                            mean(data$Income, na.rm = TRUE), 
                            data$Income)
 
+
+data$Income_0 <- ifelse(is.na(data$Income), 0, data$Income)
+
+
 #x es un vector de datos que puede contener NA
 rand.impute <- function(x) {
   # missing contiene un vector de valores T/F dependiendo del NA de x
