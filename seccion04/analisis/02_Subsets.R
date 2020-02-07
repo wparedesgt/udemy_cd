@@ -45,3 +45,5 @@ datos[1:5, -c(1,9)]
 datos[1:5, !names(datos) %in% c("No", "car_name")]
 datos[datos$mpg %in% c(15,20), c("car_name", "mpg")]
 datos[1:2, c(F,F,T, T, T, T, T, T,F )]
+
+
