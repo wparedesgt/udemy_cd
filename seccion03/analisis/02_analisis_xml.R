@@ -4,7 +4,7 @@ library(XML)
 #Leer un xml
 
 
-url <- "seccion03/data//cd_catalog.xml"
+url <- "seccion03/data/cd_catalog.xml"
 xmldoc <- xmlParse(url)  
 rootnode <- xmlRoot(xmldoc)
 cd_data <- xmlSApply(rootnode, function(x) xmlSApply(x, xmlValue))

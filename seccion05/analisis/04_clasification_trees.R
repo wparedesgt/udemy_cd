@@ -52,3 +52,5 @@ pred <- prediction(pred_pruned02[,2], banknote[-indice_banknote, "class"])
 perf <- performance(pred, "tpr", "fpr")
 
 plot(perf)
+
+
