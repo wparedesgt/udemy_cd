@@ -44,3 +44,31 @@ plot(prices_ts)
 
 plot(prices_ts, plot.type = "single", col = 1:2)
 legend("topleft", colnames(prices_ts), col = 1:2, lty = 1)
+
+
+#Descomposicion de una serie temporal Loess
+
+#log(a*b) = log(a) + log(b)
+
+flour_l <-log(prices_ts[,1])
+gas_l <- log(prices_ts[,2])
+
+flour_stl <- stl(flour_l, s.window = "period")
+
+plot(flour_stl)
+
+
+#Descomposicion Clasica
+
+flour_desc <- decompose(flour_l)
+
+plot(flour_desc)
+
+
+#Ajuste
+
+gas_dec <- decompose(gas_l)
+
+gas_season_adjusted <- prices_ts[,2] - gas_dec$seasonal
+
+plot(gas_season_adjusted)
