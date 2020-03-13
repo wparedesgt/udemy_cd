@@ -35,3 +35,5 @@ infy_fore <- forecast(inf_hw, h = 24)
 plot(infy_fore)
 
 
+
+
