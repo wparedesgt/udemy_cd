@@ -22,3 +22,4 @@ geiser %>% ggplot(aes(waiting, ..density..)) +
 geiser %>% ggplot(aes(eruptions, ..density..)) + 
   geom_histogram(fill = "cornsilk", color = "grey60", size = 0.2) +
   geom_density() + xlim(0,7)
+

@@ -29,3 +29,12 @@ bike_sum %>% ggplot(aes(x = season, y = rental, fill = workingday, label = scale
   geom_text(size = 3, position = position_stack(vjust = 0.5))
 
 
+bike_sum %>% ggplot(aes(season,rental, label = rental)) +
+  geom_bar(show.legend = TRUE, stat = "identity", fill = "lightblue", colour = "black") +
+  labs(title = "Alquileres por estacion por dia") +
+  scale_y_continuous(labels = scales::comma) +  
+  geom_text(size = 3, position = position_stack(vjust = 0.5))
+  
+bike_sum
+
+

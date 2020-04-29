@@ -7,6 +7,9 @@ library(caret)
 
 ep <- read.csv("seccion05/data/electronics-purchase.csv")
 
+
+ep
+
 set.seed(2018, sample.kind = "rounding")
 
 index_ep <- createDataPartition(ep$Purchase, p = 0.67, list = FALSE)
@@ -20,3 +23,5 @@ pred <- predict(mod, ep[-index_ep,])
 tab <- table(ep[-index_ep,]$Purchase, pred, dnn = c("Actual", "Predicha"))
 
 confusionMatrix(tab)
+
+

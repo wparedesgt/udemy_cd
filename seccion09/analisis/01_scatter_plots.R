@@ -17,3 +17,4 @@ plotwp + geom_point()
 plotwp + geom_point(alpha = 1/2, size = 5,
                     aes(color = factor(cylinders))) + geom_smooth(method = "lm", se = TRUE, col = "green") + facet_grid(cylinders ~.) + theme_bw(base_family = "Calibri", base_size = 10) + labs(x = "Peso") + labs(y = "Millas por Galon") + labs(title = "Consumo vrs Peso")
 
+

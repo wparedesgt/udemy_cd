@@ -72,3 +72,4 @@ gas_dec <- decompose(gas_l)
 gas_season_adjusted <- prices_ts[,2] - gas_dec$seasonal
 
 plot(gas_season_adjusted)
+
