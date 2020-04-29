@@ -66,6 +66,43 @@ plot(results, "prec/rec", annotate = TRUE, main = "Precision Vrs Eficacia")
 
 #Comparar Modelos
 
+#Ejercicio usar la distancia euclidea
+
+models <- list(IBCF_cos = list(name = "IBCF", params = list(method = "cosine")), 
+               IBCF_cor = list(name = "IBCF", params = list(method = "pearson")), 
+               UBCF_cos = list(name = "UBCF", params = list(method = "cosine")), 
+               UBCF_cor = list(name = "UBCF", params = list(method = "pearson")), 
+               random = list(name = "RANDOM", params = NULL))
+
+n_recomends <- c(1:5, seq(10,100,10))
+
+results <- evaluate(x = eval_sets, 
+                    method = models, 
+                    n = n_recomends)
+
+results
+
+plot(results, annotate = 1, legend = "topleft") + title("curva AUC")
+
+plot(results, "prec/rec", annotate = 1, legend = "topright") + title("Precision Vrs Eficacia")
 
 
+#Ajustar parámetros
 
+vector_k <- c(5, seq(10,40,10))
+models <- lapply(vector_k, function(k){
+  list(name = "IBCF", param = list(method = "pearson", k = k))
+})
+
+models
+
+names(models) <- paste0("IBCF_k_", vector_k)
+
+models
+
+results <- evaluate(x= eval_sets, 
+                    method = models, 
+                    n = n_recomends)
+
+plot(results, annotate = 1, legend = "topleft") + title("Curva ROC")
+plot(results, "prec/rec", annotate = 1, legend = "bottomright") + title("Precision Vrs Eficacia")
