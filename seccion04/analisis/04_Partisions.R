@@ -64,3 +64,4 @@ sample01 <- sample(datos$CRIM, 40, replace = FALSE)
 sample01
 
 
+

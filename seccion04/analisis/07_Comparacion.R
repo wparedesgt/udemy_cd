@@ -68,3 +68,4 @@ lattice::bwplot(cnt~weathersit, data = datos,
                   panel.stripplot(x,y,jitter.data = TRUE, ...)
                 },
                 par.settings = list(box.rectangle = list(fill = c('red', 'yellow', 'green'))))
+
