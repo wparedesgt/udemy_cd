@@ -106,3 +106,4 @@ results <- evaluate(x= eval_sets,
 
 plot(results, annotate = 1, legend = "topleft") + title("Curva ROC")
 plot(results, "prec/rec", annotate = 1, legend = "bottomright") + title("Precision Vrs Eficacia")
+

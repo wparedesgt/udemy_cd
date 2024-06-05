@@ -133,3 +133,4 @@ p
 plot(p$proj1, vertex.size = 15)
 
 plot(p$proj2, vertex.size = 20)
+

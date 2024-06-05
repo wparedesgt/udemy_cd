@@ -82,3 +82,4 @@ plot.igraph(new.g)
 g_sub <- induced.subgraph(g, c(3,6,8,9,15,21))
 
 plot.igraph(g_sub)
+

@@ -1,12 +1,6 @@
 #Reconocimiento de Imagenes
 
 library(tidyverse)
-
-
-
-
-
-
 library(mxnet)
 
 
