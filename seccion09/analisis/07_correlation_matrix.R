@@ -7,7 +7,7 @@ library(reshape2)
 
 mtcars <- read_csv("seccion09/data/mtcars.csv")
 
-mtcars$X1 <- NULL
+mtcars$...1 <- NULL
 
 mtcars_cor <- cor(mtcars, method = "pearson")
 

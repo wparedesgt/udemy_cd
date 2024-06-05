@@ -38,3 +38,4 @@ gas_f_2 <- filter(prices_ts[,2], filter = rep(1/n,n), sides = 1)
 plot(prices_ts[,2])
 lines(gas_f_1, col = "blue", lwd = 3)
 lines(gas_f_2, col = "red", lwd = 3)
+

@@ -47,4 +47,5 @@ ggpairs(auto[,2:7],
         lower = list(combo = "denstrip")) +
         theme(plot.title = element_text(hjust = 0.5))
 
+
  
